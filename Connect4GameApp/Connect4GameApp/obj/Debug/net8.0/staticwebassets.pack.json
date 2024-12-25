@@ -1,0 +1,45 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Connect4GameApp.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Connect4GameApp.z8ao92gea9.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Connect4GameApp.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Connect4GameApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Connect4GameApp.props",
+      "PackagePath": "build\\Connect4GameApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Connect4GameApp.props",
+      "PackagePath": "buildMultiTargeting\\Connect4GameApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Connect4GameApp.props",
+      "PackagePath": "buildTransitive\\Connect4GameApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
