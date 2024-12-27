@@ -1,0 +1,58 @@
+@page "/CreateGame"
+@using Connect4GameApp.Data
+@using Connect4GameApp.Models
+@using Microsoft.AspNetCore.Identity
+<PageTitle>Create Game</PageTitle>
+<h2>Create a game</h2>
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<EditForm Model="createGameRequest" OnValidSubmit="HandleValidSubmit" FormName="createGame">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <InputText id="name" class="form-control" @bind-Value="createGameRequest.Name" />
+            <ValidationMessage For="() => createGameRequest.Name" />
+        </div>
+
+        <div class="form-group">
+            <label for="grid">Grid</label>
+            <InputSelect id="grid" class="form-control" @bind-Value="createGameRequest.Grid">
+                <option value="6">6x7</option>
+                <option value="7">7x8</option>
+                <option value="8">8x9</option>
+            </InputSelect>
+            <ValidationMessage For="() => createGameRequest.Grid" />
+        </div>
+
+        <div class="form-group">
+            <label for="hostUsername">Host Username</label>
+            <InputText id="hostUsername" class="form-control" @bind-Value="createGameRequest.HostUsername" readonly />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Create Game</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private CreateGameRequest createGameRequest = new CreateGameRequest();
+
+    protected override async Task OnInitializedAsync()
+    {
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = await UserManager.GetUserAsync(authState.User);
+        if (user != null)
+        {
+            createGameRequest.HostUsername = user.UserName;
+        }
+    }
+
+    private async Task HandleValidSubmit()
+    {
+
+    }
+}

@@ -1510,6 +1510,7 @@ C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client
 C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\uvjcwhppla-3ye00tift8.gz
 C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\6dsdj9rwvh-9b0obi86zt.gz
 C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\4u9nh2xomf-b3r7hahvwm.gz
-C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\735dct0t9u-6hikrlm9sd.gz
-C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\wb2y5vv852-69x578usi6.gz
-C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\5i1sc75oex-znzar62mu4.gz
+C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\Connect4GameApp.Client.sourcelink.json
+C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\735dct0t9u-0dmdxks58g.gz
+C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\wb2y5vv852-1mvj6w1pwo.gz
+C:\Users\usr\source\repos\Connect4GameApp\Connect4GameApp\Connect4GameApp.Client\obj\Debug\net8.0\compressed\5i1sc75oex-de8dxkdaxj.gz

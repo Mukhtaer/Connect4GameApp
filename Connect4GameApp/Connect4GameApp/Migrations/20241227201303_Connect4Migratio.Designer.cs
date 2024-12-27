@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Connect4GameApp.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241225192316_AddGameMigrations")]
-    partial class AddGameMigrations
+    [Migration("20241227201303_Connect4Migratio")]
+    partial class Connect4Migratio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Connect4GameApp.Client",
   "resources": {
-    "hash": "sha256-+lIVtN8HnZM7U5Yk2yv8X/PBQm/KyMssPsQaOdF/jcw=",
+    "hash": "sha256-pGlf5vJtdlHdeXs5Y3ubeGwG9JVAjBHsoFznGjpCiTw=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-VdKq87/z5NIxZKmuM+fv38XF+RcEb/bg3jVBwQSfwP4="
     },
@@ -239,10 +239,10 @@
       "mscorlib.wasm": "sha256-04e4k5XU8HWGB/dq/2+j84xzzGPflTs0IYWI0OxogVc=",
       "netstandard.wasm": "sha256-gnGZURPnoSmjXuYNCOJi5tt8qn2LRImWgue1Ru3/TDQ=",
       "System.Private.CoreLib.wasm": "sha256-6w3jYr0arcp8jnt4aeqh+AmqrLA6q7jl9rQYAwLzE0M=",
-      "Connect4GameApp.Client.wasm": "sha256-dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU="
+      "Connect4GameApp.Client.wasm": "sha256-dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg="
     },
     "pdb": {
-      "Connect4GameApp.Client.pdb": "sha256-ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg="
+      "Connect4GameApp.Client.pdb": "sha256-ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc="
     },
     "satelliteResources": {
       "cs": {

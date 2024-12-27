@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "HiOeVaVFCsFMsB9fbeMUArlc5HxI86MXLw1VN/okKco=",
+  "Hash": "Qv5dnusn152BMa2KSj3XBhpBx6RJjl6XaibDDowv+Vk=",
   "Source": "Connect4GameApp",
   "BasePath": "_content/Connect4GameApp",
   "Mode": "Default",
@@ -71,8 +71,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "manifest",
-      "Fingerprint": "znzar62mu4",
-      "Integrity": "D0ZRuFIotqsF7jKWFtAoeqc8H+3CxXKiYFs2QMVx+Mg=",
+      "Fingerprint": "de8dxkdaxj",
+      "Integrity": "O7NU0T3sVJCrKpW+5ixTLZxeVe00Igx52U+5A21iti4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json"
@@ -113,8 +113,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "symbol",
-      "Fingerprint": "69x578usi6",
-      "Integrity": "ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg=",
+      "Fingerprint": "1mvj6w1pwo",
+      "Integrity": "ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Connect4GameApp.Client.pdb"
@@ -134,8 +134,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "WasmResource",
       "AssetTraitValue": "runtime",
-      "Fingerprint": "6hikrlm9sd",
-      "Integrity": "dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU=",
+      "Fingerprint": "0dmdxks58g",
+      "Integrity": "dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Connect4GameApp.Client.wasm"
@@ -7197,7 +7197,7 @@
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5drqcrdp5x-1xsmcixx8d.gz"
     },
     {
-      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-znzar62mu4.gz",
+      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-de8dxkdaxj.gz",
       "SourceId": "Connect4GameApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7211,11 +7211,11 @@
       "RelatedAsset": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "u3i308vml3",
-      "Integrity": "ag5lt2Aozu51G8kK5uP9TEZMDtkRE/xP0wC3caLT/J4=",
+      "Fingerprint": "vkn5hfg7pu",
+      "Integrity": "nxM95xiSjMckGL1E5N7s6wm3ev14Iqug8AqIjcvo1xk=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-znzar62mu4.gz"
+      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-de8dxkdaxj.gz"
     },
     {
       "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5if7ryye2o-iudrcw56e1.gz",
@@ -7575,7 +7575,7 @@
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\718xdwtgh2-ggby92gbf5.gz"
     },
     {
-      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-6hikrlm9sd.gz",
+      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-0dmdxks58g.gz",
       "SourceId": "Connect4GameApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -7589,11 +7589,11 @@
       "RelatedAsset": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Connect4GameApp.Client.wasm",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "rqwx4eh4hy",
-      "Integrity": "/U+KXxv2D+CpjHfC1t4xp6BhzFiZc0LoLcqc+1C02wI=",
+      "Fingerprint": "kjctr7p0pr",
+      "Integrity": "wOtAjlhEg5lvdcINhBSS1HjMdlkJfxW6POccKDZpSEE=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-6hikrlm9sd.gz"
+      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-0dmdxks58g.gz"
     },
     {
       "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\75qwxsdcun-sv4ivqpdih.gz",
@@ -12069,7 +12069,7 @@
       "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\w67t3k8kv9-yfl2eaopkw.gz"
     },
     {
-      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-69x578usi6.gz",
+      "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-1mvj6w1pwo.gz",
       "SourceId": "Connect4GameApp.Client",
       "SourceType": "Project",
       "ContentRoot": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\",
@@ -12083,11 +12083,11 @@
       "RelatedAsset": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Connect4GameApp.Client.pdb",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "c7hk40cjhi",
-      "Integrity": "GJhxFpMc4shOoUhfucTepVJjtcpQ+Y1w7Mr5KHSIt1o=",
+      "Fingerprint": "smu3w7cyb1",
+      "Integrity": "1JmpCinXCy1d9xSA/8m57NdU244Gi/F/8aLKQsdaHY4=",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-69x578usi6.gz"
+      "OriginalItemSpec": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-1mvj6w1pwo.gz"
     },
     {
       "Identity": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wi46jdtw0b-kktc6bz4es.gz",
@@ -12928,23 +12928,23 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"D0ZRuFIotqsF7jKWFtAoeqc8H+3CxXKiYFs2QMVx+Mg=\""
+          "Value": "\"O7NU0T3sVJCrKpW+5ixTLZxeVe00Igx52U+5A21iti4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:19:13 GMT"
+          "Value": "Fri, 27 Dec 2024 20:12:56 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-D0ZRuFIotqsF7jKWFtAoeqc8H+3CxXKiYFs2QMVx+Mg="
+          "Value": "sha256-O7NU0T3sVJCrKpW+5ixTLZxeVe00Igx52U+5A21iti4="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-znzar62mu4.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-de8dxkdaxj.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
@@ -12971,11 +12971,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ag5lt2Aozu51G8kK5uP9TEZMDtkRE/xP0wC3caLT/J4=\""
+          "Value": "\"nxM95xiSjMckGL1E5N7s6wm3ev14Iqug8AqIjcvo1xk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:12:41 GMT"
+          "Value": "Wed, 25 Dec 2024 19:19:13 GMT"
         },
         {
           "Name": "Vary",
@@ -12987,19 +12987,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"D0ZRuFIotqsF7jKWFtAoeqc8H+3CxXKiYFs2QMVx+Mg=\""
+          "Value": "W/\"O7NU0T3sVJCrKpW+5ixTLZxeVe00Igx52U+5A21iti4=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-D0ZRuFIotqsF7jKWFtAoeqc8H+3CxXKiYFs2QMVx+Mg="
+          "Value": "sha256-O7NU0T3sVJCrKpW+5ixTLZxeVe00Igx52U+5A21iti4="
         }
       ]
     },
     {
       "Route": "_framework/blazor.boot.json.gz",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-znzar62mu4.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\5i1sc75oex-de8dxkdaxj.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13024,11 +13024,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ag5lt2Aozu51G8kK5uP9TEZMDtkRE/xP0wC3caLT/J4=\""
+          "Value": "\"nxM95xiSjMckGL1E5N7s6wm3ev14Iqug8AqIjcvo1xk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:12:41 GMT"
+          "Value": "Wed, 25 Dec 2024 19:19:13 GMT"
         },
         {
           "Name": "Vary",
@@ -13038,7 +13038,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ag5lt2Aozu51G8kK5uP9TEZMDtkRE/xP0wC3caLT/J4="
+          "Value": "sha256-nxM95xiSjMckGL1E5N7s6wm3ev14Iqug8AqIjcvo1xk="
         }
       ]
     },
@@ -13202,28 +13202,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg=\""
+          "Value": "\"ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:19:11 GMT"
+          "Value": "Fri, 27 Dec 2024 20:12:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg="
+          "Value": "sha256-ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc="
         }
       ]
     },
     {
       "Route": "_framework/Connect4GameApp.Client.pdb",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-69x578usi6.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-1mvj6w1pwo.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000079295853"
+          "Quality": "0.000078363765"
         }
       ],
       "ResponseHeaders": [
@@ -13241,15 +13241,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12610"
+          "Value": "12760"
         },
         {
           "Name": "ETag",
-          "Value": "\"GJhxFpMc4shOoUhfucTepVJjtcpQ+Y1w7Mr5KHSIt1o=\""
+          "Value": "\"1JmpCinXCy1d9xSA/8m57NdU244Gi/F/8aLKQsdaHY4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:12:38 GMT"
+          "Value": "Wed, 25 Dec 2024 19:19:11 GMT"
         },
         {
           "Name": "Vary",
@@ -13261,19 +13261,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg=\""
+          "Value": "W/\"ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZmGWqeesbGymSMUKiEjYhpyZq1bUyADdwL7chTGFKHg="
+          "Value": "sha256-ybwPA0LJA6Qn+je7ZG+tSdIFuh3rcZ0o0vQ5ryFs1uc="
         }
       ]
     },
     {
       "Route": "_framework/Connect4GameApp.Client.pdb.gz",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-69x578usi6.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\wb2y5vv852-1mvj6w1pwo.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13290,7 +13290,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "12610"
+          "Value": "12760"
         },
         {
           "Name": "Content-Type",
@@ -13298,11 +13298,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GJhxFpMc4shOoUhfucTepVJjtcpQ+Y1w7Mr5KHSIt1o=\""
+          "Value": "\"1JmpCinXCy1d9xSA/8m57NdU244Gi/F/8aLKQsdaHY4=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:12:38 GMT"
+          "Value": "Wed, 25 Dec 2024 19:19:11 GMT"
         },
         {
           "Name": "Vary",
@@ -13312,7 +13312,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GJhxFpMc4shOoUhfucTepVJjtcpQ+Y1w7Mr5KHSIt1o="
+          "Value": "sha256-1JmpCinXCy1d9xSA/8m57NdU244Gi/F/8aLKQsdaHY4="
         }
       ]
     },
@@ -13339,28 +13339,28 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU=\""
+          "Value": "\"dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 25 Dec 2024 19:12:39 GMT"
+          "Value": "Fri, 27 Dec 2024 20:12:55 GMT"
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU="
+          "Value": "sha256-dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg="
         }
       ]
     },
     {
       "Route": "_framework/Connect4GameApp.Client.wasm",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-6hikrlm9sd.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-0dmdxks58g.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000182748538"
+          "Quality": "0.000179372197"
         }
       ],
       "ResponseHeaders": [
@@ -13378,11 +13378,11 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5471"
+          "Value": "5574"
         },
         {
           "Name": "ETag",
-          "Value": "\"/U+KXxv2D+CpjHfC1t4xp6BhzFiZc0LoLcqc+1C02wI=\""
+          "Value": "\"wOtAjlhEg5lvdcINhBSS1HjMdlkJfxW6POccKDZpSEE=\""
         },
         {
           "Name": "Last-Modified",
@@ -13398,19 +13398,19 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU=\""
+          "Value": "W/\"dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-dlZSETHgkaHiSH2AJLQ6aILHoQQMmntvXF+3xOz6xIU="
+          "Value": "sha256-dEMRUldsAV8kAb0hENA98yBEawVUztnK8OaVky0oPPg="
         }
       ]
     },
     {
       "Route": "_framework/Connect4GameApp.Client.wasm.gz",
-      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-6hikrlm9sd.gz",
+      "AssetFile": "C:\\Users\\usr\\source\\repos\\Connect4GameApp\\Connect4GameApp\\Connect4GameApp.Client\\obj\\Debug\\net8.0\\compressed\\735dct0t9u-0dmdxks58g.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -13427,7 +13427,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5471"
+          "Value": "5574"
         },
         {
           "Name": "Content-Type",
@@ -13435,7 +13435,7 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/U+KXxv2D+CpjHfC1t4xp6BhzFiZc0LoLcqc+1C02wI=\""
+          "Value": "\"wOtAjlhEg5lvdcINhBSS1HjMdlkJfxW6POccKDZpSEE=\""
         },
         {
           "Name": "Last-Modified",
@@ -13449,7 +13449,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/U+KXxv2D+CpjHfC1t4xp6BhzFiZc0LoLcqc+1C02wI="
+          "Value": "sha256-wOtAjlhEg5lvdcINhBSS1HjMdlkJfxW6POccKDZpSEE="
         }
       ]
     },
