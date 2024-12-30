@@ -1,0 +1,105 @@
+@page "/CreateGame"
+@rendermode InteractiveWebAssembly
+@inject NavigationManager NavigationManager
+@inject HttpClient HttpClient
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@using Connect4GameApp.Client.Models;
+
+<PageTitle>Create Game</PageTitle>
+<h2>Create a game</h2>
+
+@if (!string.IsNullOrEmpty(successMessage))
+{
+    <div class="alert alert-success">@successMessage</div>
+}
+
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">@errorMessage</div>
+}
+
+<EditForm Model="createGameRequest" OnValidSubmit="HandleValidSubmit" FormName="createGame">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <div class="col-md-4">
+        <div class="form-group mt-3">
+            <label for="name">Game Name</label>
+            <InputText id="name" class="form-control" @bind-Value="createGameRequest.Name" />
+            <ValidationMessage For="() => createGameRequest.Name" />
+        </div>
+
+        <div class="row mt-3">
+            <div class="form-group col-md-4">
+                <label for="boardColor">Board Color</label>
+                <InputText id="boardColor" type="color" class="form-control"
+                    @bind-Value="createGameRequest.BoardColor" />
+                <ValidationMessage For="() => createGameRequest.BoardColor" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="player1Color">Player 1 Color</label>
+                <InputText id="player1Color" type="color" class="form-control"
+                    @bind-Value="createGameRequest.Player1Color" />
+                <ValidationMessage For="() => createGameRequest.Player1Color" />
+            </div>
+            <div class="form-group col-md-4">
+                <label for="player2Color">Player 2 Color</label>
+                <InputText id="player2Color" type="color" class="form-control"
+                    @bind-Value="createGameRequest.Player2Color" />
+                <ValidationMessage For="() => createGameRequest.Player2Color" />
+            </div>
+        </div>
+        <div class="form-group mt-3">
+            <label for="hostUsername">Host Username</label>
+            <InputText id="hostUsername" class="form-control" @bind-Value="createGameRequest.HostUsername" readonly />
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-primary col-12">Create Game</button>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private CreateGameRequest createGameRequest = new CreateGameRequest();
+    private string? baseUrl;
+    private string? errorMessage;
+    private string? successMessage;
+
+    protected override async Task OnInitializedAsync()
+    {
+        baseUrl = NavigationManager.BaseUri;
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authState.User;
+
+        createGameRequest.BoardColor = "#FFFF00";
+        createGameRequest.Player1Color = "#FF0000";
+        createGameRequest.Player2Color = "#0000FF";
+        createGameRequest.HostUsername = user.Identity?.Name;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        this.errorMessage = string.Empty;
+        Console.WriteLine("Creating Game");
+        try
+        {
+            var response = await HttpClient.PostAsJsonAsync($"{baseUrl}api/game/create", createGameRequest);
+            Console.WriteLine("response code" + response.StatusCode);
+            if (response.IsSuccessStatusCode)
+            {
+                errorMessage = string.Empty;
+                successMessage = "Game created successfully";
+                await Task.Delay(2000);
+                NavigationManager.NavigateTo("/");
+            }
+            else
+            {
+                errorMessage = "Failed to create game";
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+            errorMessage = ex.Message;
+        }
+    }
+}

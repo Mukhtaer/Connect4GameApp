@@ -1,0 +1,88 @@
+@page "/Games"
+@rendermode InteractiveServer
+@using Connect4GameApp.Data
+@using Connect4GameApp.Models
+@using Microsoft.AspNetCore.Identity
+@using GameModel = Connect4GameApp.Models.Game
+@inject UserManager<ApplicationUser> UserManager
+@inject NavigationManager NavigationManager
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IHttpClientFactory HttpClientFactory
+
+<PageTitle>Games</PageTitle>
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2 class="display-6">Available Games</h2>
+        <p class="text-muted">Select a game below and prepare for an engaging challenge!</p>
+    </div>
+
+    @if (games == null)
+    {
+        <div class="d-flex justify-content-center my-5">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    }
+    else
+    {
+        @if (games.Count == 0)
+        {
+            <div class="alert alert-warning text-center" role="alert">
+                No games available at the moment. Please check back later.
+            </div>
+        }
+        else
+        {
+            <div class="row row-cols-1 row-cols-md-3 g-2">
+                @foreach (var game in games)
+                {
+                    <div class="col">
+                        <div class="card card-shadow-sm h-100 text-white">
+                            <div class="card-body d-flex flex-column">
+                                <div class="mb-3">
+                                    <h5 class="card-title">@game.Name</h5>
+                                    <p class="card-text text-secondary">
+                                        <span class="badge bg-success">@game.Status</span>
+                                    </p>
+                                </div>
+                                <p class="small text-muted">
+                                    Get ready to play "<strong>@game.Name</strong>" with a grid size of
+                                    <strong>@game.GridSize</strong>.
+                                    The board features vibrant colors to enhance your experience!
+                                </p>
+                                <p class="small">
+                                    <strong>Game Code:</strong> <span class="text-primary">@game.Code</span>
+                                </p>
+                                <div class="mt-auto">
+                                    <a class="btn btn-outline-primary w-100" href="/Game/@game.Code">
+                                        <i class="bi bi-controller"></i> Join "@game.Name"
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+@code {
+    List<GameModel>? games = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            var client = HttpClientFactory.CreateClient();
+            client.BaseAddress = new Uri(NavigationManager.BaseUri);
+            games = await client.GetFromJsonAsync<List<GameModel>>("api/game/list");
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e.Message);
+        }
+    }
+}

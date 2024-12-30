@@ -1,0 +1,255 @@
+@page "/game/backup/{gameCode}"
+@using System.Drawing
+@using Connect4GameApp.Client.Models
+@using GameModel = Connect4GameApp.Client.Models.Game
+@inject NavigationManager NavigationManager
+@inject HttpClient HttpClient
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IJSRuntime JSRuntime
+@using Microsoft.AspNetCore.SignalR.Client
+@using Microsoft.AspNetCore.Authorization
+@attribute [Authorize]
+@inject AuthenticationStateProvider GetAuthenticationStateAsync
+@inject NavigationManager NavigationManager
+@rendermode InteractiveWebAssembly
+
+<PageTitle>Game</PageTitle>
+
+<HeadContent>
+    <style>
+        /* Add your custom styles here */
+    </style>
+</HeadContent>
+
+@if (game == null)
+{
+    <div class="d-flex justify-content-center">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+}
+else
+{
+    @if (game.Status == GameStatus.Created || game.Status == GameStatus.AwaitingGuest || game.Status ==
+   GameStatus.AwaitingHost || game.Status == GameStatus.Finished)
+    {
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-8 col-lg-6">
+                    <div class="card shadow-lg border-0 rounded-4 text-white">
+                        <div class="card-body text-center py-5">
+                            <h3 class="card-title text-warning mb-4" style="font-family: 'Orbitron', sans-serif;">@game.Name
+                            </h3>
+                            <p class="small text-light mb-4">
+                                <i class="fas fa-gamepad"></i> <strong>Game Code:</strong> @game.Code
+                                <span class="badge bg-info ms-2">@game.Status</span>
+                            </p>
+                            <div class="d-flex justify-content-between small text-light mb-4">
+                                <span><i class="fas fa-user"></i> <strong>Host:</strong> @(game?.HostId == user?.Id ? "You" :
+                            game?.Host?.UserName)</span>
+                                <span><i class="fas fa-user-friends"></i> <strong>Guest:</strong> @(game?.GuestId == user?.Id ?
+                            "You" : game?.Guest?.UserName ?? "Waiting...")</span>
+                            </div>
+                            <div class="progress mb-4" style="height: 8px; background: #3b3a6a;">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 50%;" aria-valuenow="50"
+                                    aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            @if (game?.Status != GameStatus.Finished)
+                            {
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                    @if (game?.HostId == user?.Id)
+                                    {
+                                        if (game?.GuestId != null)
+                                        {
+                                            <button class="btn btn-warning col-12" @onclick="StartGame" style="transition: 0.3s;">
+                                                <i class="fas fa-play"></i> Start Game
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-warning col-12" disabled style="transition: 0.3s;">
+                                                <i class="fas fa-play"></i> Waiting for Guest to Join the Game
+                                            </button>
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        @if (game?.GuestId == user?.Id)
+                                        {
+                                            <button class="btn btn-outline-light me-md-2 col-12" disabled style="transition: 0.3s;">
+                                                <i class="fas fa-hourglass-half"></i> Waiting for Host to Start the Game
+                                            </button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn btn-outline-light me-md-2 col-12" @onclick="JoinGame"
+                                                style="transition: 0.3s;">
+                                                <i class="fas fa-sign-in-alt"></i> Join Game
+                                            </button>
+                                        }
+                                    }
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (game != null && game.Status == GameStatus.InProgress)
+    {
+        <h1>Playing Game</h1>
+        @* <Board @rendermode="InteractiveWebAssembly"
+            BoardColor="@(game != null ? ColorTranslator.FromHtml(game.BoardColor) : Color.Empty)"
+            Player1Color="@(game != null ? ColorTranslator.FromHtml(game.Player1Color) : Color.Empty)"
+            Player2Color="@(game != null ? ColorTranslator.FromHtml(game.Player2Color) : Color.Empty)" /> *@
+    }
+}
+
+<div class="notifications position-fixed top-0 end-0 p-3" style="z-index: 1050;">
+    @foreach (var notification in notifications)
+    {
+        <div class="alert alert-info alert-dismissible fade show" role="alert">
+            @notification
+            <button type="button" class="btn-close" @onclick="() => RemoveNotification(notification)"
+                aria-label="Close"></button>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public string? gameCode { get; set; }
+    public Gamer? user;
+    private GameModel? game;
+    private HubConnection? hubConnection;
+    private string? baseUrl;
+    private List<string> notifications = new List<string>();
+    public Gamer? host { get; set; }
+    public Gamer? guest { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        baseUrl = NavigationManager.BaseUri;
+
+        try
+        {
+            this.user = await HttpClient.GetFromJsonAsync<Gamer>($"{baseUrl}api/user/current");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
+
+        game = await HttpClient.GetFromJsonAsync<GameModel>($"{baseUrl}api/game/{gameCode}");
+
+        if (game != null)
+        {
+            game.Host = game.HostId != null ? await HttpClient.GetFromJsonAsync<Gamer>($"{baseUrl}api/user/{game.HostId}") : null;
+            game.Guest = game.GuestId != null ? await HttpClient.GetFromJsonAsync<Gamer>($"{baseUrl}api/user/{game.GuestId}") :
+            null;
+            Console.WriteLine($"Game.host: {game.Host?.UserName}");
+            Console.WriteLine($"Game.guest: {game.Guest?.UserName}");
+        }
+
+        hubConnection = new HubConnectionBuilder()
+        .WithUrl(NavigationManager.ToAbsoluteUri("/gamehub"))
+        .Build();
+
+        hubConnection.On("GameStarted", async () =>
+        {
+            await RefreshGameState();
+            notifications.Add("The game has started!");
+            StateHasChanged();
+        });
+
+        hubConnection.On("PlayerJoined", async () =>
+        {
+            await RefreshGameState();
+            if (user?.Id != game?.GuestId)
+            {
+                notifications.Add("A player has joined the game!");
+            }
+            StateHasChanged();
+        });
+
+        await hubConnection.StartAsync();
+        await hubConnection.SendAsync("JoinGame", gameCode);
+    }
+
+    private async Task RefreshGameState()
+    {
+        game = await HttpClient.GetFromJsonAsync<GameModel>($"{baseUrl}api/game/{gameCode}");
+        if (game != null)
+        {
+            game.Host = game.HostId != null ? await HttpClient.GetFromJsonAsync<Gamer>($"{baseUrl}api/user/{game.HostId}") : null;
+            game.Guest = game.GuestId != null ? await HttpClient.GetFromJsonAsync<Gamer>($"{baseUrl}api/user/{game.GuestId}") :
+            null;
+        }
+    }
+
+    private async Task JoinGame()
+    {
+        var joinRequest = new JoinGameRequest
+            {
+                GameCode = gameCode,
+                GameId = game!.Id,
+                GuestId = user?.Id
+            };
+
+        await HttpClient.PostAsJsonAsync($"{baseUrl}api/game/join", joinRequest);
+        if (hubConnection != null)
+        {
+            await hubConnection.SendAsync("JoinGame", gameCode);
+        }
+    }
+
+    private async Task StartGame()
+    {
+        var joinRequest = new JoinGameRequest
+            {
+                GameCode = gameCode,
+                GameId = game!.Id,
+            };
+
+        await HttpClient.PostAsJsonAsync($"{baseUrl}api/game/start", joinRequest);
+        if (hubConnection != null)
+        {
+            await hubConnection.SendAsync("StartGame", gameCode);
+        }
+    }
+
+    public async ValueTask DisposeAsync()
+    {
+        if (hubConnection != null)
+        {
+            await hubConnection.DisposeAsync();
+        }
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            foreach (var notification in notifications)
+            {
+                await JSRuntime.InvokeVoidAsync("setTimeout", (Action)(() =>
+                {
+                    notifications.Remove(notification);
+                    StateHasChanged();
+                }), 5000);
+            }
+        }
+    }
+
+    private void RemoveNotification(string notification)
+    {
+        notifications.Remove(notification);
+        StateHasChanged();
+    }
+}
