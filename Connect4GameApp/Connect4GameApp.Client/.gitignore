@@ -1,0 +1,20 @@
+# dotenv environment variables file
+.env
+
+# Log files
+*.log
+
+# Local History for Visual Studio
+.localhistory/
+
+# Bin and Obj folders
+bin/
+obj/
+
+# Other files
+*.tmp
+*.bak
+*.swp
+
+# Visual Studio files
+.vs/
